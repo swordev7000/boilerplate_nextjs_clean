@@ -1,0 +1,9 @@
+{
+  "Layout": {
+    "title_nav": "My App",
+    "copyright": "2026 My App. All rights reserved."
+  },
+  "HomePage": {
+    "title": "Hello world!"
+  }
+}
