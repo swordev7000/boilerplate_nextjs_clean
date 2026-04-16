@@ -1,3 +1,10 @@
+import { useTranslations } from "next-intl";
+
 export default function Home() {
-  return <></>;
+  const t = useTranslations("HomePage");
+  return (
+    <main>
+      <section>{t("title")}</section>
+    </main>
+  );
 }

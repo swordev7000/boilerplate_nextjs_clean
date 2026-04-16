@@ -3,6 +3,7 @@ import { Providers } from "@/providers/Providers";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { useTranslations } from "next-intl";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,13 +25,23 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const t = useTranslations();
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Providers>{children}</Providers>
+        <Providers>
+          <header>
+            <nav>{t("Layout.title_nav")}</nav>
+          </header>
+          {children}
+          <footer>
+            <p>&copy; {t("Layout.copyright")}</p>
+          </footer>
+        </Providers>
       </body>
     </html>
   );
