@@ -9,7 +9,6 @@ const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -30,15 +29,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full  antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Providers>
-          <header>
-            <nav>{t("Layout.title_nav")}</nav>
+          <header className="flex flex-col items-center">
+            <h3>{t("Layout.title_nav")}</h3>
+            <nav></nav>
           </header>
           {children}
-          <footer>
+          <footer className="bg-red-500">
             <p>&copy; {t("Layout.copyright")}</p>
           </footer>
         </Providers>
