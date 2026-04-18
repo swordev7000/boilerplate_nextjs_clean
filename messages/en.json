@@ -4,6 +4,8 @@
     "copyright": "2026 My App. All rights reserved."
   },
   "HomePage": {
-    "title": "Hello world!"
+    "title": "Hello world!",
+    "description": "Welcome to my portfolio website.",
+    "cta": "Go deeper"
   }
 }

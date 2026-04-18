@@ -4,6 +4,8 @@
     "copyright": "2026 Mon application. Tous droits réservés."
   },
   "HomePage": {
-    "title": "Bonjour le monde!"
+    "title": "Bonjour le monde!",
+    "description": "Bienvenue sur mon site de portfolio.",
+    "cta": "Allez plus loin"
   }
 }
